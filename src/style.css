@@ -1,4 +1,46 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 body {
-  background: grey;
+  background: green;
+}
+.card {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  height: 400px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.top-suit {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+.bottom-suit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+}
+.number {
+  position: absolute;
+  text-align: center;
+  font-size: 80px;
+}
+.spade {
+  content: "\2660";
+  color: black;
+}
+.heart {
+  content: "\2665";
+  color: red;
+}
+.club {
+  content: "\2663";
+  color: black;
+}
+.diamond {
+  content: "\2666";
+  color: red;
 }
