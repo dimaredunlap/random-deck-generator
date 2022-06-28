@@ -1,4 +1,3 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
 body {
   background: green;
 }
@@ -6,6 +5,7 @@ body {
   text-align: center;
   margin: auto;
   margin-top: 20px;
+  background-color: white;
   height: 400px;
   width: 250px;
   border-radius: 10px;
@@ -29,18 +29,18 @@ body {
   font-size: 80px;
 }
 .spade {
-  content: "\2660";
+  content: "♠";
   color: black;
 }
 .heart {
-  content: "\2665";
+  content: "♥";
   color: red;
 }
 .club {
-  content: "\2663";
+  content: "♣";
   color: black;
 }
 .diamond {
-  content: "\2666";
+  content: "♦";
   color: red;
 }
