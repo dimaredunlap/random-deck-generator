@@ -1,46 +1,34 @@
 body {
-  background: green;
+  background-color: green;
 }
+
 .card {
+  border-radius: 15px;
   text-align: center;
-  margin: auto;
-  margin-top: 20px;
+  width: 300px;
+  height: 500px;
   background-color: white;
-  height: 400px;
-  width: 250px;
-  border-radius: 10px;
-  border: 1px solid black;
+  margin: auto;
+  font-size: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .top-suit {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 80px;
+  padding-left: 3px;
+  margin: 0;
+  align-self: flex-start;
 }
+
 .bottom-suit {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 80px;
+  align-self: flex-end;
+  transform: rotate(180deg);
+  padding-left: 3px;
+  margin: 0;
 }
-.number {
-  position: absolute;
-  text-align: center;
-  font-size: 80px;
-}
-.spade {
-  content: "♠";
-  color: black;
-}
-.heart {
-  content: "♥";
-  color: red;
-}
-.club {
-  content: "♣";
-  color: black;
-}
-.diamond {
-  content: "♦";
+
+.red {
   color: red;
 }

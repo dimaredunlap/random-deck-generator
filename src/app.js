@@ -1,19 +1,16 @@
 /* eslint-disable */
-import "bootstrap";
+
 import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = () => {
-  document.querySelector(".card").classList.add(generateRandomSuit());
-  document.querySelector(".card").innerHTML = generateRandomNumber();
+window.onload = function() {
+  setInterval(randomCard, 10000);
 };
 
-let generateRandomNumber = () => {
-  //   let numb = Math.floor(Math.random() * 12);
+function randomCard() {
   let numbers = [
-    "A",
     "2",
     "3",
     "4",
@@ -23,16 +20,24 @@ let generateRandomNumber = () => {
     "8",
     "9",
     "10",
-    "J",
+    "A",
     "Q",
-    "K"
+    "K",
+    "J"
   ];
-  let indexNumbers = Math.floor(Math.random() * numbers.length);
-  return numbers[indexNumbers];
-};
-let generateRandomSuit = () => {
-  //   let numb = Math.floor(Math.random() * 12);
-  let suit = ["diamond", "spade", "heart", "club"];
-  let indexSuit = Math.floor(Math.random() * suit.length);
-  return suit[indexSuit];
-};
+  let suits = ["♦", "♥", "♠", "♣"];
+  let randNumber = Math.floor(Math.random() * numbers.length);
+  document.querySelector(".numbers").innerText = numbers[randNumber];
+  let randSuit = Math.floor(Math.random() * suits.length);
+  document.querySelector(".top-suit").innerText = suits[randSuit];
+  document.querySelector(".bottom-suit").innerText = suits[randSuit];
+  if (suits[randSuit] == "♥" || suits[randSuit] == "♦") {
+    document.querySelector(".top-suit").classList.add("red");
+    document.querySelector(".bottom-suit").classList.add("red");
+    document.querySelector(".numbers").classList.add("red");
+  } else {
+    document.querySelector(".top-suit").classList.remove("red");
+    document.querySelector(".bottom-suit").classList.remove("red");
+    document.querySelector(".numbers").classList.remove("red");
+  }
+}
